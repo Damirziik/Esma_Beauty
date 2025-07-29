@@ -1,0 +1,418 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8e6e9; /* розово-бежевый */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.logo {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #8e44ad;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #5e3370;
+    margin-top: 40px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.call-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.call-button button {
+        --glow-color: rgb(217, 176, 255);
+        --glow-spread-color: rgba(191, 123, 255, 0.781);
+        --enhanced-glow-color: rgb(231, 206, 255);
+        --btn-color: rgb(100, 61, 136);
+        border: .25em solid var(--glow-color);
+        padding: 1em 3em;
+        color: var(--glow-color);
+        font-size: 15px;
+        font-weight: bold;
+        background-color: var(--btn-color);
+        border-radius: 1em;
+        outline: none;
+        box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+        text-shadow: 0 0 .5em var(--glow-color);
+        position: relative;
+        transition: all 0.3s;
+    }
+
+    button::after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--glow-spread-color);
+        filter: blur(2em);
+        opacity: .7;
+        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+    }
+
+    button:hover {
+        color: var(--btn-color);
+        background-color: var(--glow-color);
+        box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+    }
+
+    button:active {
+        box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+    }
+
+
+.call-button button:hover {
+    background-color: #c06993;
+}
+.logo {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+    border: 4px solid rgba(222, 180, 200, 0.4); /* нежная розовая рамка */
+    border-radius: 16px; /* скругление углов */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* мягкая тень */
+    background-color: #fff;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .logo {
+        max-width: 220px;
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    li {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .call-button button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+
+    .call-button button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+@media (min-width: 320px) and (max-width: 450px) {
+    .container {
+        padding: 16px;
+    }
+
+    .logo {
+        max-width: 160px;
+        margin-bottom: 12px;
+        border-width: 3px;
+        border-radius: 12px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    li {
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.4;
+    }
+
+    .note {
+        font-size: 13px;
+    }
+
+    .call-button {
+        margin-top: 30px;
+    }
+
+    .call-button button {
+        font-size: 15px;
+        padding: 10px 16px;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.social-links .whatsapp {
+    background-color: #25D366;
+}
+
+.social-links .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-links .telegram {
+    background-color: #0088cc;
+}
+
+.social-links a:hover {
+    opacity: 0.9;
+}
+
+/* адаптив под мобилку */
+@media (max-width: 450px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        width: 90%;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.more-btn {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.more-btn:hover {
+    background-color: #e2e2e2;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.more-link {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* Стили для кнопки "Узнать больше" */
+.price-list li {
+    position: relative;
+    padding-right: 120px; /* место под кнопку */
+}
+
+.price-list .more-info {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.price-list .more-info:hover {
+    background-color: #e2554f;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .price-list li {
+        padding-right: 0;
+        padding-bottom: 40px; /* место под кнопку снизу */
+    }
+
+    .price-list .more-info {
+        position: static;
+        display: inline-block;
+        margin-top: 8px;
+        transform: none;
+    }
+}
+/* Кнопка "Узнать больше" — стиль */
+.more-info-btn {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 6px 14px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.more-info-btn:hover {
+    background-color: #e2e2e2;
+    color: #000;
+}
+.more-info-btn {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 6px 14px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: inherit;
+}
+
+.more-info-btn:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}

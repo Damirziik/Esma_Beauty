@@ -12,7 +12,7 @@ body {
     padding: 30px;
     background-color: #ffffff;
     border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -60,58 +60,59 @@ li {
 }
 
 .call-button button {
-        --glow-color: rgb(217, 176, 255);
-        --glow-spread-color: rgba(191, 123, 255, 0.781);
-        --enhanced-glow-color: rgb(231, 206, 255);
-        --btn-color: rgb(100, 61, 136);
-        border: .25em solid var(--glow-color);
-        padding: 1em 3em;
-        color: var(--glow-color);
-        font-size: 15px;
-        font-weight: bold;
-        background-color: var(--btn-color);
-        border-radius: 1em;
-        outline: none;
-        box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 1em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-        text-shadow: 0 0 .5em var(--glow-color);
-        position: relative;
-        transition: all 0.3s;
-    }
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
 
-    button::after {
-        pointer-events: none;
-        content: "";
-        position: absolute;
-        top: 120%;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--glow-spread-color);
-        filter: blur(2em);
-        opacity: .7;
-        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-    }
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
 
-    button:hover {
-        color: var(--btn-color);
-        background-color: var(--glow-color);
-        box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 2em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-    }
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+}
 
-    button:active {
-        box-shadow: 0 0 0.6em .25em var(--glow-color),
-        0 0 2.5em 2em var(--glow-spread-color),
-        inset 0 0 .5em .25em var(--glow-color);
-    }
+button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 .5em .25em var(--glow-color);
+}
 
 
 .call-button button:hover {
     background-color: #c06993;
 }
+
 .logo {
     max-width: 300px;
     display: block;
@@ -122,6 +123,7 @@ li {
     background-color: #fff;
     padding: 10px;
 }
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -170,6 +172,7 @@ li {
         padding: 8px 16px;
     }
 }
+
 @media (min-width: 320px) and (max-width: 450px) {
     .container {
         padding: 16px;
@@ -215,6 +218,7 @@ li {
         max-width: 300px;
     }
 }
+
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -262,6 +266,7 @@ li {
         font-size: 16px;
     }
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -271,7 +276,7 @@ li {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -282,7 +287,7 @@ li {
     width: 90%;
     max-width: 400px;
     position: relative;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .close-btn {
@@ -307,12 +312,15 @@ li {
 .more-btn:hover {
     background-color: #e2e2e2;
 }
+
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -340,6 +348,7 @@ li {
     text-decoration: underline;
     cursor: pointer;
 }
+
 /* Стили для кнопки "Узнать больше" */
 .price-list li {
     position: relative;
@@ -380,6 +389,7 @@ li {
         transform: none;
     }
 }
+
 /* Кнопка "Узнать больше" — стиль */
 .more-info-btn {
     display: inline-block;
@@ -398,6 +408,7 @@ li {
     background-color: #e2e2e2;
     color: #000;
 }
+
 .more-info-btn {
     display: inline-block;
     margin-left: 10px;
@@ -415,4 +426,83 @@ li {
 .more-info-btn:hover {
     background-color: #e0e0e0;
     color: #000;
+}
+.location-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    border: 2px solid #0077cc;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.4);
+    transition: all 0.25s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.location-card:hover {
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+    transform: scale(1.03);
+}
+
+.location-icon {
+    font-size: 22px;
+}
+
+.location-text {
+    display: inline-block;
+}
+@media (max-width: 320px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .price-card {
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #ff69b4, #ffe4e1);
+        color: #222;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .price-card h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .price-card p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .more-info-btn {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        background-color: #ff1493;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .modal {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90% !important;
+        max-width: 300px;
+        border-radius: 12px;
+        padding: 16px;
+    }
 }

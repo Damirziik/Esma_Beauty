@@ -7,14 +7,14 @@ document.querySelectorAll('.more-btn').forEach(btn => {
     });
 });
 
-// Закрытие модалки
+
 document.querySelectorAll('[data-close]').forEach(btn => {
     btn.addEventListener('click', () => {
         btn.closest('.modal').style.display = 'none';
     });
 });
 
-// Клик вне модалки
+
 window.addEventListener('click', e => {
     if (e.target.classList.contains('modal')) {
         e.target.style.display = 'none';
@@ -42,6 +42,28 @@ closeBtn.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.style.display = 'none';
+    }
+});
+// Кнопки открытия модалки
+document.querySelectorAll('.more-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-modal');
+        const modal = document.getElementById(targetId);
+        if (modal) modal.style.display = 'block';
+    });
+});
+
+// Кнопки закрытия
+document.querySelectorAll('[data-close]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('.modal').style.display = 'none';
+    });
+});
+
+// Закрытие при клике вне контента
+window.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
     }
 });
 
